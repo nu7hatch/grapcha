@@ -1,6 +1,11 @@
 require 'rspec'
 require 'grapcha'
 
-RSpec.configure do |config|
+include Grapcha
 
+Dir[File.expand_path('../support/*.rb', __FILE__)].each do |file|
+  require file
+end
+
+RSpec.configure do |config|
 end
